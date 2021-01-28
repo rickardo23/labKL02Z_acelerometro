@@ -5,3 +5,8 @@
 
 # Excluye carpeta FreeRTOS_TAD_logs
 /FreeRTOS_TAD_logs
+
+# Excluye carpeta temporal Debug/Release
+/MKL02Z32xxx4_Project_acelerometro/Debug/
+/MKL02Z32xxx4_Project_acelerometro/Release/
+/MKL02Z32xxx4_Project_acelerometro/doc/
