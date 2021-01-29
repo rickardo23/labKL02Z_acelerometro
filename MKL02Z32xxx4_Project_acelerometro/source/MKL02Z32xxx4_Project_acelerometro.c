@@ -18,9 +18,9 @@
 /*******************************************************************************
  * Definitions
  ******************************************************************************/
-//#define MMA851_I2C_DEVICE_ADDRESS	0x1D
+#define MMA851_I2C_DEVICE_ADDRESS	0x1D
 
-//#define MMA8451_WHO_AM_I_MEMORY_ADDRESS		0x0D
+#define MMA8451_WHO_AM_I_MEMORY_ADDRESS		0x0D
 
 /*******************************************************************************
  * Private Prototypes
@@ -49,7 +49,7 @@ int main(void) {
 
 	status_t status;
 	uint8_t nuevo_byte_uart;
-	//uint8_t	nuevo_dato_i2c;
+	uint8_t	nuevo_dato_i2c;
 
   	/* Init board hardware. */
     BOARD_InitBootPins();
@@ -60,17 +60,17 @@ int main(void) {
     BOARD_InitDebugConsole();
 #endif
 
-   // (void)uart0Inicializar(115200);	//115200bps
-   // (void)i2c0MasterInit(100000);	//100kbps
+   (void)uart0Inicializar(115200);	//115200bps
+    (void)i2c0MasterInit(100000);	//100kbps
 
-   // PRINTF("Usar teclado para controlar LEDs\r\n");
-  //  PRINTF("r-R led ROJO\r\n");
-  //  PRINTF("v-V led VERDE\r\n");
-  //  PRINTF("a-A led AZUL\r\n");
-  //  PRINTF("M buscar acelerometro\r\n");
+    PRINTF("Usar teclado para controlar LEDs\r\n");
+    PRINTF("r-R led ROJO\r\n");
+    PRINTF("v-V led VERDE\r\n");
+    PRINTF("a-A led AZUL\r\n");
+    PRINTF("M buscar acelerometro\r\n");
 
 
-   /* while(1) {
+    while(1) {
     	if(uart0CuantosDatosHayEnBuffer()>0){
     		status=uart0LeerByteDesdeBuffer(&nuevo_byte_uart);
     		if(status==kStatus_Success){
@@ -109,7 +109,7 @@ int main(void) {
     			printf("error\r\n");
     		}
     	}
-    }*/
+    }
 
     return 0 ;
 }
