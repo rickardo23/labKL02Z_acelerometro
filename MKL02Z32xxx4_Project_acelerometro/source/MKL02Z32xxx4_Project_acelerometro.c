@@ -46,9 +46,9 @@
  * Public Source Code
  ******************************************************************************/
 int main(void) {
-	status_t resultado;
-	//status_t status;
-	//uint8_t nuevo_byte_uart;
+
+	status_t status;
+	uint8_t nuevo_byte_uart;
 	//uint8_t	nuevo_dato_i2c;
 
   	/* Init board hardware. */
@@ -59,17 +59,7 @@ int main(void) {
     /* Init FSL debug console. */
     BOARD_InitDebugConsole();
 #endif
-printf("hello world\n");
 
-//coloca el pin PTB/ en alto
-resultado=gpioPutLow(KPTB7);
-
-if (resultado!=kStatus_Success)
-	printf("error de operacion");
-
-volatile static int i=0;
-while (1){i++;
-__asm volatile ("nop");}
    // (void)uart0Inicializar(115200);	//115200bps
    // (void)i2c0MasterInit(100000);	//100kbps
 
